@@ -42,42 +42,54 @@ body.appendChild(buttonEl);
 
 
 //Start of quiz questions
-const questions = [
+var questions = [
     {
         question: "What is JavaScript?",
-        answer: {
-            a: "Coffee Maker", isCorrect: false,
-            b: "Text Editor", isCorrect: false,
-            c: "Programming Language", isCorrect: true,
-        }
+        choices: ["Coffee Maker", "Text Editor", "Programming Language"],
+        answer: "Programming Language"
     },
     {
         question: "What are JavaScript Data Types?",
-        answer: {
-            a: "String", isCorrect: true,
-            b: "Variable", isCorrect: false,
-            c: "Content", isCorrect: false,
-        }
+        choices: ["String, Variable, Content","Number, String, Boolean, Object, Undefined", "Math.floor, isCorrect, Array"],
+        answer: "Number, String, Boolean, Object, Undefined"
     },
     {
         question: "Which symbol is used for comments in JavaScript?",
-        answer: {
-            a: "//", isCorrect: false,
-            b: "/*", isCorrect: false,
-            c: "*/", isCorrect: true,
-        }
+        choices: ["//", "/*", "*/", "all of the above"],
+        answer: "All of the above"
     },
+    {
+        question: "What are all of the types of pop up boxes available in JavaScript?",
+        choices: ["alert, confirm, prompt", "cardboard,foam,ice", "windows", "all of the above"],
+        answer: "alert, confirm, prompt"
+    },
+    {
+        question: "What are the main for loops in JavaScript?",
+        choices: ["for, for/in, while", "if, for, null, string, while", "for, do...while, for/in, while"],
+        answer: "for, do...while, for/in, while"
+        
+    }
 ]
 
 
 //Creating a function that will iterate through questions array
 var createQuizAction = function () {
-    console.log ("inside function")
-questions.forEach((question,questionNum) => {
-const answers = []
+    questions.forEach((question, questionNum) => {
+        const answer = []
+        answer.push(
+            `<button type="button" ${questionNum}" value="${letter}">
+         ${letter} :
+         ${question.answer[letter]}
+     </button>`
+        );
 
 })
 
 
 }
 buttonEl.addEventListener("click", createQuizAction);
+
+function timer() {
+    var timeLeft = 30;
+    var timeInterval = 
+}
